@@ -1,6 +1,6 @@
 const fibonacci = function(num) {
     num = Number(num);
-    if (num>0) {
+    if (num>=0) {
         let sum=1;
         let fibo = [0, 1];
         for (let index = 2; index <= num; index++) {
@@ -13,6 +13,6 @@ const fibonacci = function(num) {
     }
 };
 
-console.log(fibonacci("6"));
+console.log(fibonacci(0));
 // Do not edit below this line
 module.exports = fibonacci;
