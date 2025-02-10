@@ -1,12 +1,39 @@
 const removeFromArray = function(array,...toRemove) {
     console.log(toRemove.length);
-    for (let i = 0; i <= toRemove.length; i++) {  
-        while (array.indexOf(toRemove[i])!==-1) {
-            let where = array.indexOf(toRemove[i]);
-            let newArray = array.splice(where,1);
+    let i = 0;
+    let j = 0;
+    let newArray = [];
+    // the for to go through an array can also be done with 
+    // the forEach() function 
+    // This would write every item in an array
+    // array.forEach((element) => console.log(element));
+    // The => is the same as function and return, so the previous would be the same as
+    // array.forEach(element) {
+    // console.log(element)
+    // }
+    // 
+    // for (let i = 0; i <= toRemove.length; i++) { 
+    //     while (array.indexOf(toRemove[i])!==-1) {
+    //         let where = array.indexOf(toRemove[i]);
+    //         let newArray = array.splice(where,1);
+    //     }
+    // }
+    // return array;
+    // Another way of soving it------------------------------
+    // using the forEach this could be
+    // -----------------------------------------------------
+    array.forEach(element => {
+        if (!toRemove.includes(array[i])) {
+            // if i put the ! at the beggining it means if this is false
+            // so in this case it would be if the array toRemove does NOT
+            // include array[i] then do...
+            newArray[j] = array [i];
+            j++;
+            console.log(newArray);
         }
-    }
-    return array;
+        i++; 
+    });
+    return newArray;
 };
 
 removeFromArray([1, 2, 3, 4, 3], 3);
