@@ -1,7 +1,10 @@
 const removeFromArray = function(array,...toRemove) {
-    while (array.indexOf(toRemove)!==-1) {
-        const where = array.indexOf(toRemove);
-        const newArray = array.splice(where,1);
+    console.log(toRemove.length);
+    for (let i = 0; i <= toRemove.length; i++) {  
+        while (array.indexOf(toRemove[i])!==-1) {
+            let where = array.indexOf(toRemove[i]);
+            let newArray = array.splice(where,1);
+        }
     }
     return array;
 };
