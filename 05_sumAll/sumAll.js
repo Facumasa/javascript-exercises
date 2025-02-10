@@ -1,8 +1,7 @@
 const sumAll = function(num1,num2) {
     let sum = 0;
     if (num1<0 || num2<0 || 
-        !Number.isInteger(num1) || !Number.isInteger(num2) ||
-        typeof num1 != "number" || typeof num2 != "number"
+        !Number.isInteger(num1) || !Number.isInteger(num2)
         )  {
         return "ERROR";
     }
@@ -22,5 +21,6 @@ const sumAll = function(num1,num2) {
  return sum;
 };
 
+sumAll(1.1,4);
 // Do not edit below this line
 module.exports = sumAll;
